@@ -17,6 +17,24 @@ public class PostazioneService {
 	@Autowired
 	private PostazioneRepository psr;
 
+	// Ricerca tramite postazione e citta
+	public List<Postazione> findByPostazioneAndCitta(String citta) {
+		List<Postazione> Allpostazioni = psr.findByEdificioCitta(citta);
+
+		if (Allpostazioni.isEmpty()) {
+			log.info("Nessuna postazione trovata per la città: {}", citta);
+		} else {
+			log.info("Postazioni trovate per la città {}: ", citta);
+			for (Postazione postazione : Allpostazioni) {
+				log.info("ID: {}, Descrizione: {}, Tipo: {}, Occupati Max: {}, Edificio: {}", postazione.getId(),
+						postazione.getDescrizione(), postazione.getTipo(), postazione.getNumeroMassimoOccupanti(),
+						postazione.getEdificio().getCitta());
+			}
+		}
+		return Allpostazioni;
+	}
+
+
 	// Salva
 	public void save(Postazione postazione) {
 		psr.save(postazione);
