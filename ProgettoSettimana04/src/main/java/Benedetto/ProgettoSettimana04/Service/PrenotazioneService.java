@@ -1,4 +1,4 @@
-package Benedetto.ProgettoSettimana04.DAO;
+package Benedetto.ProgettoSettimana04.Service;
 
 import java.util.List;
 import java.util.UUID;
@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import Benedetto.ProgettoSettimana04.Entities.Prenotazione;
 import Benedetto.ProgettoSettimana04.Exception.ItemNotFoundExceptionUUID;
+import Benedetto.ProgettoSettimana04.Repository.PrenotazioneRepository;
 import lombok.extern.slf4j.Slf4j;
 
 @Service
@@ -37,9 +38,9 @@ public class PrenotazioneService {
 	public void findByIdAndUpdate(UUID id, Prenotazione prenotazione) throws ItemNotFoundExceptionUUID {
 		Prenotazione trovato = this.findById(id);
 		trovato.setId(id);
-		trovato.setDataprenotazione(null);
-		trovato.setPostazione(null);
-		trovato.setUtente(null);
+		trovato.setDataprenotazione(prenotazione.getDataprenotazione());
+		trovato.setPostazione(prenotazione.getPostazione());
+		trovato.setUtente(prenotazione.getUtente());
 		prr.save(trovato);
 	}
 

@@ -1,4 +1,4 @@
-package Benedetto.ProgettoSettimana04.DAO;
+package Benedetto.ProgettoSettimana04.Service;
 
 import java.util.List;
 
@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import Benedetto.ProgettoSettimana04.Entities.Utente;
 import Benedetto.ProgettoSettimana04.Exception.ItemNotFoundException;
+import Benedetto.ProgettoSettimana04.Repository.UtenteRepository;
 import lombok.extern.slf4j.Slf4j;
 
 @Service

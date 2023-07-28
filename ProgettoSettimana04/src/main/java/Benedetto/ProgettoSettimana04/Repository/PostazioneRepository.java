@@ -1,4 +1,4 @@
-package Benedetto.ProgettoSettimana04.DAO;
+package Benedetto.ProgettoSettimana04.Repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

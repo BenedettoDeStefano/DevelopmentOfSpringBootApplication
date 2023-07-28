@@ -2,6 +2,7 @@ package Benedetto.ProgettoSettimana04;
 
 import org.springframework.boot.CommandLineRunner;
 
+
 public class GestionePrenotazioneRunner implements CommandLineRunner {
 
 	@Override
