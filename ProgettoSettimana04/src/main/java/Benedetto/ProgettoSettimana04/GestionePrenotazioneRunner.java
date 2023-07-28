@@ -49,7 +49,12 @@ public class GestionePrenotazioneRunner implements CommandLineRunner {
 		pss.save(cb.prenotazione2());
 		pss.save(cb.prenotazione3());
 
-//		log.info(ps.findByTipoAndEdificio_Citta(TipoPostazione.OPENSPACE, "Firenze").toString());
+//		log.info("Ricerca postazioni di tipo OPENSPACE a Firenze:");
+//		List<Postazione> postazioniOpenSpaceFirenze = ps.findByTipoAndCitta(TipoPostazione.PRIVATO, "Firenze");
+//		for (Postazione postazione : postazioniOpenSpaceFirenze) {
+//			log.info("ID: {}, Descrizione: {}, Tipo: {}, Numero Massimo Occupanti: {}, Città: {}", postazione.getId(),
+//					postazione.getDescrizione(), postazione.getTipo(), postazione.getNumeroMassimoOccupanti(),
+//					postazione.getEdificio().getCitta());
+//		}
 	}
-
 }

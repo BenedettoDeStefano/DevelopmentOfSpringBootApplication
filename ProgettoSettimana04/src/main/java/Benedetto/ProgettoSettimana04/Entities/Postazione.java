@@ -25,7 +25,6 @@ public class Postazione {
 	@GeneratedValue
 	private Long id;
 
-//	private String codice;
 	private String descrizione;
 	private int numeroMassimoOccupanti;
 
