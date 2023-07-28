@@ -32,29 +32,29 @@ public class ConfigurationBean {
 				.build();
 	}
 
-	// --------------------------------- Prenotazioni
-	// ---------------------------------
+	// ----------------------------- Prenotazioni -----------------------------
 
 	@Bean("Prenotazione1")
 	public Prenotazione prenotazione1() {
 		return Prenotazione.builder().id(UUID.randomUUID()).utente(utente1()).postazione(postazione1())
-				.dataPrenotazione(LocalDate.now()).build();
+				.dataPrenotazione(LocalDate.now()).scadenzaPrenotazione(LocalDate.now().plusDays(1)).build();
 	}
 
 	@Bean("Prenotazione2")
 	public Prenotazione prenotazione2() {
 		return Prenotazione.builder().id(UUID.randomUUID()).utente(utente2()).postazione(postazione2())
-				.dataPrenotazione(LocalDate.now().plusDays(1)).build();
+				.dataPrenotazione(LocalDate.now().plusDays(1)).scadenzaPrenotazione(LocalDate.now().plusDays(2))
+				.build();
 	}
 
 	@Bean("Prenotazione3")
 	public Prenotazione prenotazione3() {
 		return Prenotazione.builder().id(UUID.randomUUID()).utente(utente3()).postazione(postazione3())
-				.dataPrenotazione(LocalDate.now().plusDays(2)).build();
+				.dataPrenotazione(LocalDate.now().plusDays(2)).scadenzaPrenotazione(LocalDate.now().plusDays(3))
+				.build();
 	}
 
-	// --------------------------------- Postazioni
-	// ---------------------------------
+	// ----------------------------- Postazioni -----------------------------
 
 	@Bean("Postazione1")
 	public Postazione postazione1() {

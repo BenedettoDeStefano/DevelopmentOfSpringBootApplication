@@ -30,4 +30,6 @@ public class Prenotazione {
 	private Postazione postazione;
 
 	LocalDate dataPrenotazione;
+
+	LocalDate scadenzaPrenotazione;
 }
