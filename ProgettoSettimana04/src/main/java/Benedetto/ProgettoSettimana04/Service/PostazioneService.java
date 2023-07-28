@@ -17,10 +17,21 @@ public class PostazioneService {
 	@Autowired
 	private PostazioneRepository psr;
 
+//	public List<Postazione> findByTipoAndEdificio_Citta(TipoPostazione tipo, String citta) {
+//		List<Postazione> pos1 = psr.findByTipoAndEdificio_Citta(tipo, citta);
+//
+//		for (Postazione postazione : pos1) {
+//			log.info("", postazione.getId(), postazione.getDescrizione(), postazione.getTipo(),
+//					postazione.getNumeroMassimoOccupanti(), postazione.getEdificio().getCitta());
+//
+//		}
+//		return pos1;
+//	}
+
 	// Salva
 	public void save(Postazione postazione) {
 		psr.save(postazione);
-		log.info(postazione.getDescrizione() + " salvato!");
+		log.info(postazione.getDescrizione() + " salvata!");
 	}
 
 	// CercaTutto
@@ -37,7 +48,6 @@ public class PostazioneService {
 	public void findByIdAndUpdate(Long id, Postazione postazione) throws ItemNotFoundException {
 		Postazione trovato = this.findById(id);
 		trovato.setId(id);
-		trovato.setCodice(postazione.getCodice());
 		trovato.setDescrizione(postazione.getDescrizione());
 		trovato.setEdificio(postazione.getEdificio());
 		trovato.setTipo(postazione.getTipo());

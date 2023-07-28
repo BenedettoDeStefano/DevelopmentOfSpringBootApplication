@@ -36,39 +36,39 @@ public class ConfigurationBean {
 	// ---------------------------------
 
 	@Bean("Prenotazione1")
-	public Prenotazione prenotazione() {
+	public Prenotazione prenotazione1() {
 		return Prenotazione.builder().id(UUID.randomUUID()).utente(utente1()).postazione(postazione1())
-				.dataprenotazione(LocalDate.now()).build();
+				.dataPrenotazione(LocalDate.now()).build();
 	}
 
 	@Bean("Prenotazione2")
 	public Prenotazione prenotazione2() {
 		return Prenotazione.builder().id(UUID.randomUUID()).utente(utente2()).postazione(postazione2())
-				.dataprenotazione(LocalDate.now().plusDays(1)).build();
+				.dataPrenotazione(LocalDate.now().plusDays(1)).build();
 	}
 
 	@Bean("Prenotazione3")
 	public Prenotazione prenotazione3() {
 		return Prenotazione.builder().id(UUID.randomUUID()).utente(utente3()).postazione(postazione3())
-				.dataprenotazione(LocalDate.now().plusDays(2)).build();
+				.dataPrenotazione(LocalDate.now().plusDays(2)).build();
 	}
 
 	// --------------------------------- Postazioni
 	// ---------------------------------
 
-	@Bean("Prostazione1")
+	@Bean("Postazione1")
 	public Postazione postazione1() {
 		return Postazione.builder().descrizione("Postazione01").tipo(TipoPostazione.OPENSPACE)
 				.numeroMassimoOccupanti(10).edificio(edificio1()).build();
 	}
 
-	@Bean("Prostazione2")
+	@Bean("Postazione2")
 	public Postazione postazione2() {
 		return Postazione.builder().descrizione("Postazione02").tipo(TipoPostazione.PRIVATO).numeroMassimoOccupanti(20)
 				.edificio(edificio2()).build();
 	}
 
-	@Bean("Prostazione3")
+	@Bean("Postazione3")
 	public Postazione postazione3() {
 		return Postazione.builder().descrizione("Postazione03").tipo(TipoPostazione.SALA_RIUNIONI)
 				.numeroMassimoOccupanti(30).edificio(edificio3()).build();

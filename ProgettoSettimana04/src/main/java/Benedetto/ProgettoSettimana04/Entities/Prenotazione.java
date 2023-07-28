@@ -21,7 +21,6 @@ import lombok.Setter;
 public class Prenotazione {
 
 	@Id
-//	@GeneratedValue
 	private UUID id;
 
 	@ManyToOne
@@ -30,5 +29,5 @@ public class Prenotazione {
 	@ManyToOne
 	private Postazione postazione;
 
-	LocalDate dataprenotazione;
+	LocalDate dataPrenotazione;
 }

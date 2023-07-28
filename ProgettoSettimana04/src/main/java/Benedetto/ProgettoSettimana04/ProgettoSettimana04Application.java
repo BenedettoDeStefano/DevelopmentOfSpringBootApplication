@@ -13,11 +13,3 @@ public class ProgettoSettimana04Application {
 	}
 
 }
-
-//		private UtenteRepository ur = new UtenteRepository();
-//		
-//		private PrenotazioneService pr;
-//		
-//		Utente utente1 = new Utente(26133131l, "Chiattillo", "Benedetto", "benchiat@gmail.com");
-//		ur.save(utente1);
-//		System.out.println(utente1.toString());

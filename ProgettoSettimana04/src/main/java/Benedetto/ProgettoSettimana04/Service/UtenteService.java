@@ -40,7 +40,6 @@ public class UtenteService {
 	// CercaTramiteIDedAggiorna
 	public void findByIdAndUpdate(Long id, Utente utente) throws ItemNotFoundException {
 		Utente trovato = this.findById(id);
-		trovato.setId(id);
 		trovato.setUsername(utente.getUsername());
 		trovato.setNomeCompleto(utente.getNomeCompleto());
 		trovato.setEmail(utente.getEmail());
